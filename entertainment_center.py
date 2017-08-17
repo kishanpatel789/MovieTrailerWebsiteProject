@@ -1,7 +1,9 @@
+# Import modules. 
 import media
 import fresh_tomatoes
 
-# instantiate movies
+# Create instances of the Movie class. Each instance contains the movie's
+# title, poster URL, trailer URL, and audience rating.
 the_matrix = media.Movie("The Matrix",
                          "https://upload.wikimedia.org/wikipedia/en/thumb/c/c1/The_Matrix_Poster.jpg/220px-The_Matrix_Poster.jpg",
                          "https://www.youtube.com/watch?v=a94b1yZOBes",
@@ -39,9 +41,11 @@ the_imitation_game = media.Movie("The Imitation Game",
                                  "https://www.youtube.com/watch?v=T40uC-SznNs",
                                  "PG-13")
 
-# store all movies in array for fresh_tomatoes
+# Store all movie instances in array to be used by the open_movies_page()
+# function in the fresh_tomatoes module. 
 movies = [the_matrix, the_lion_king, inception, the_imitation_game, the_dark_knight,
           v_for_vendetta, spiderman_homecoming, captain_america_civl_war]
 
-# open webpage with movie tiles
+# This function call opens a page of movies generated from the input, a list
+# of movie instances.
 fresh_tomatoes.open_movies_page(movies)
